@@ -1,0 +1,64 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intravilan Land</title>
+    <link rel="stylesheet" href="~/css/Style.css" asp-append-version="true">
+</head>
+<body>
+    <div class="container">
+        <!-- Search Bar -->
+        <input type="text" id="searchBar" placeholder="Search for land..." onkeyup="filterItems()">
+
+        <div class="sellerCards">
+            <div class="card">
+                <img src="/images/NoImageAvailable.jpg" alt="NoImage">
+                <div class="container">
+                    <h4><b>Teren in Craiova</b></h4>
+                    <p>300 euro/metru</p>
+                    <button onclick="addToCart('Teren in Craiova', 300)">Buy</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="/images/NoImageAvailable.jpg" alt="Land Image">
+                <div class="container">
+                    <h4><b>Teren in Romanesti</b></h4>
+                    <p>400 euro/metru</p>
+                    <button onclick="addToCart('Teren in Romanesti', 400)">Buy</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="/images/NoImageAvailable.jpg" alt="Land Image 2">
+                <div class="container">
+                    <h4><b>Teren in Brestei</b></h4>
+                    <p>250 euro/metru</p>
+                    <button onclick="addToCart('Teren in Brestei', 250)">Buy</button>
+                </div>
+            </div>
+        </div>
+
+        <button class="button-28" onclick="location.href='@Url.Action("Index", "Home")'">Back</button>
+    </div>
+
+    <script>
+        function filterItems() {
+            let input = document.getElementById("searchBar").value.toLowerCase();
+            let listItems = document.querySelectorAll("#landList li");
+
+            listItems.forEach(item => {
+                let text = item.textContent.toLowerCase();
+                item.style.display = text.includes(input) ? "block" : "none";
+            });
+        }
+    </script>
+</body>
+</html>
+

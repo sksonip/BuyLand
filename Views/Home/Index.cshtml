@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Land in Craiova</title>
+    <link rel="stylesheet" href="~/css/Style.css" asp-append-version="true">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Buy Land</h1>
+    </div>
+    <div class="content">
+        <button class="button-28" onclick="location.href='@Url.Action("Intravilan", "Home")'">Intravilan</button>
+        <button class="button-28" onclick="location.href='@Url.Action("extravilan", "Home")'">Extravilan</button>
+    </div>
+</body>
+</html>
+

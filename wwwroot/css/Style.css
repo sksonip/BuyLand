@@ -1,0 +1,171 @@
+﻿body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #eaeaea;
+}
+
+
+.header {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: White;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px black;
+    background-size: cover;
+    background-position: center;
+    animation: changeBackground 15s infinite alternate;
+}
+
+/* Keyframes for changing background */
+@keyframes changeBackground {
+    0%, 33% {
+        background-image: url("/images/LandImage.jpg");
+    }
+
+    34%, 66% {
+        background-image: url("/images/LandImage2.jpg");
+    }
+
+    67%, 100% {
+        background-image: url("/images/LandImage3.jpg");
+    }
+}
+
+.button-28 {
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #1A1A1A;
+    border-radius: 50px;
+    box-sizing: border-box;
+    color: #3B3B3B;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 200px; /* Adjusted for spacing */
+    min-height: 60px;
+    min-width: 150px; /* Ensure it's visible */
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    max-width: 200px; /* Limits width */
+}
+
+    .button-28:hover {
+        color: #fff;
+        background-color: #1A1A1A;
+        box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+        transform: translateY(-2px);
+    }
+
+    .button-28:active {
+        box-shadow: none;
+        transform: translateY(0);
+    }
+
+/* Center buttons */
+.content {
+    width: 100%;
+    background: white;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+/* Search Bar */
+#searchBar {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 2px solid #1A1A1A;
+    border-radius: 10px;
+}
+
+/* Land List */
+#landList {
+    list-style: none;
+    padding: 0;
+}
+
+    #landList li {
+        background: #f4f4f4;
+        padding: 15px;
+        margin: 10px auto;
+        width: 50%;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        font-size: 18px;
+    }
+
+.sellerCards {
+    display: flex;
+    flex-wrap: wrap; /* Allows multiple cards in a row */
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+    margin-top: 20px;
+}
+
+.card {
+    width: 300px; /* Adjust card width */
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden; /* Prevents content overflow */
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+    .card:hover {
+        transform: translateY(-5px); /* Small lift effect */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .card img {
+        width: 100%;
+        height: 200px; /* Fixed image height for consistency */
+        object-fit: cover; /* Prevents image distortion */
+        border-radius: 10px 10px 0 0;
+    }
+
+    .card .container {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .card h4 {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    .card p {
+        color: #333;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .card button {
+        background-color: #1A1A1A;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
+    }
+
+        .card button:hover {
+            background-color: #444;
+        }

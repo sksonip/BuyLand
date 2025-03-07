@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Your Cart";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Cart</title>
+    <script src="site.js"></script>
+</head>
+<body>
+    <h1>Your Cart</h1>
+    <ul id="cart-list"></ul>
+    <button onclick="clearCart()">Clear Cart</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+            let cartList = document.getElementById("cart-list");
+
+            cart.forEach(item => {
+                let li = document.createElement("li");
+                li.textContent = `${item.name} - $${item.price}`;
+                cartList.appendChild(li);
+            });
+        });
+
+        function clearCart() {
+            sessionStorage.removeItem("cart");
+            location.reload();
+        }
+    </script>
+</body>
+</html>
