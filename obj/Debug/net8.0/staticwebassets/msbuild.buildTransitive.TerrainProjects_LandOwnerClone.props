@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\TerrainProjects_LandOwnerClone.props" />
-</Project>
